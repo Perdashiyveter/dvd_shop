@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Магазин</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-title">Магазин</div>
+            <nav class="header-nav">
+                <div class="container">
+                    <div class="nav-links">
+                        <a href="" class="nav-link">Главная</a>
+                        <a href="" class="nav-link">О нас</a>
+                        <a href="" class="nav-link">Скидки</a>
+                    </div>
+                    <input class="nav-search" id="search-input" type="search" placeholder="Введите фильм">
+                    <button class="nav-search-button" onclick="searchProducts()">Искать</button>
+                    <div class="nav-img-links">    
+                        <a href="" class="nav-img-saved-items">
+                            <img src="saved-items.png">
+                        </a>
+                        <a href="cart.html" class="nav-img-cart">
+                            <img src="bag.png">
+                        </a>
+                    </div>
+                    <div class="cart-popover" id="cart-popover">
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <select id="sort-select" onchange="sortProducts()">
+            <option value="default">По популярности</option>
+            <option value="name-asc">Название: А-Я</option>
+            <option value="name-desc">Название: Я-А</option>
+            <option value="price-asc">Цена: по возрастанию</option>
+            <option value="price-desc">Цена: по убыванию</option>
+        </select>
+
+        <div class="container">
+            <div id="products"></div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
